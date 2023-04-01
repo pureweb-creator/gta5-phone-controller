@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+    /* overflow: hidden; */
+    height: 100vh
+}
+.controls{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 50px;
+    background: radial-gradient(57% 93.32% at 48.95% 14.17%, #252835 0%, #0D0D0E 100%)
+}
+.controls-row{
+    display: flex;
+    margin-bottom: 0px;
+    justify-content: space-between;
+}
+.controls-row:first-child{
+    padding: 0 80px;
+}
+
+.control-btn{
+    width: 80px;
+    height: 80px;
+    padding: 7px;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 4px solid rgb(9, 9, 9);
+    -webkit-tap-highlight-color:transparent;
+    background: linear-gradient(180deg, #30313D 0%, #17181F 97.71%);
+    box-shadow: 0px 5px 9px 5px rgba(0, 0, 0, 0.25), 0px -4px 5px -1px #2B2E36;
+}
+
+.control-btn__inner{
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border-width: 2px;
+    position: relative;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.control-btn__inner::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.control-btn__inner_fwd{
+    border-color: #009393;
+    filter: drop-shadow(0px 0px 2px #009393);
+}
+
+.control-btn__inner_bwd{
+    border-color: #930000;
+}
+
+.control-btn__inner_bwd::after{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -2px 3px rgba(255, 255, 255, 0.25);
+}
+
+.control-btn.active{
+    transform: scale(.9);
+    box-shadow: none;
+    border: none;
+}
+
+.control-btn_fwd.active .control-btn__inner_fwd::after{
+    background-color: #009393;
+}
+.control-btn_bwd.active .control-btn__inner_bwd::after{
+    background-color: #930000;
+}
+
+.control-icon{
+    width: 100%;
+    height: 100%;
+}
+
+.turn-btn.active svg{
+    filter: unset;
+}
+
+.turn-btn svg path{
+    stroke-width: 2;
+}
+
+.turn-btn.active{
+    transform: scale(.9);
+}
+
+.turn-btn_left svg path{
+    stroke: #E2A300;
+}
+
+.turn-btn_left.active svg path{
+    fill: #E2A300
+}
+
+.turn-btn_right svg path{
+    stroke: #A400E8;
+}
+
+.turn-btn_right.active svg path{
+    fill: #A400E8
+}
+
+.turn-btn_left svg,
+.turn-btn_right svg{
+    filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.35)) drop-shadow(0px -4px 4px rgba(255, 255, 255, 0.07)) 
+}

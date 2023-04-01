@@ -1,0 +1,5 @@
+ahk==0.14.2
+Flask==2.2.3
+Flask-SocketIO==5.3.3
+gevent==22.10.2
+eventlet==0.33.3
